@@ -22,6 +22,9 @@
   <link rel="manifest" href="Icons/site.webmanifest">
 
   <!-- External CSS Dependency -->
+  <link rel="stylesheet" type="text/css" href="css/framework.css">
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
+  <link rel="stylesheet" type="text/css" href="css/nav.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 
   <!-- External JS Dependency -->
@@ -29,7 +32,6 @@
 </head>
 
 <!-- Body Section -->
-
 <body id="window-context">
 
   <!-- Loading Screen -->
@@ -48,25 +50,33 @@
       </button>
 
       <!-- Mobile Vertical Navigation Links -->
-      <h4> Gui Cheng's Portfolio </h4>
+      <div class="nav-title">
+        <img src="images/gc-logo.png" class="logo" alt="website-logo">
+        <p class="nav-header"> Gui Cheng's Portfolio </p>
+      </div>
+
       <div class="nav-wrapper" id="hamburger-menu">
-        <button id="page1btn1"> Home </button>
-        <button id="page2btn1"> Works </button>
-        <button id="page3btn1"> Education </button>
-        <button class="fullscreen-button"> Full Screen </button>
+        <a href="index.html"> Home </a>
+        <a href="hobbies.html"> Works </a>
+        <a href="education.html"> Education </a>
+        <a class="fullscreen-button"> Full Screen </a>
       </div>
     </nav>
 
     <!-- Desktop Navigation Menu -->
     <nav id="desktop-nav">
-      <p class="nav-header"> Gui Cheng's Portfolio </p>
+
+      <div class="nav-title">
+        <img src="images/gc-logo.png" class="logo" alt="website-logo">
+        <p class="nav-header"> Gui Cheng's Portfolio </p>
+      </div>
 
       <!-- Desktop Horizontal Navigation Links -->
       <div class="nav-wrapper">
-        <button id="page1btn2" class="nav-button"> Home </button>
-        <button id="page2btn2" class="nav-button"> Works </button>
-        <button id="page3btn2" class="nav-button"> Education </button>
-        <button class="nav-button fullscreen-button"> Full Screen </button>
+        <a href="index.html" class="nav-button"> Home <span></span> </a>
+        <a href="hobbies.html" class="nav-button"> Works <span></span> </a>
+        <a href="education.html" class="nav-button"> Education <span></span> </a>
+        <a class="nav-button fullscreen-button"> Full Screen <span></span> </a>
       </div>
     </nav>
   </nav>
@@ -75,14 +85,14 @@
   <main id="view-context">
 
     <!-- Page Banner -->
-    <div id="banner-context">
+    <div id="banner-context" style="background-image: url(images/index-banner.jpeg);">
       <h1 class="banner-text" id="banner-header"> Home </h1>
     </div>
 
     <div id="page-context">
 
       <!-- Homepage Content -->
-      <div class="page" id="page1">
+      <div class="page">
 
         <!-- Scroll to bottom button -->  
         <a href="#content-bottom" id="content-top" class="content-scroll"> To Bottom </a> 
@@ -93,43 +103,80 @@
           <img src="images/index/bio.jpg" alt="multiple-people-exercising">
 
           <div class="description-wrapper-01">
-            <h1> My Bio </h1>
+            <h1 class="c-header-01"> My Bio </h1>
+            <h2 class="c-header-01"> I am Loong Gui Cheng, a 19 year old Singaporean student aspiring to be a game developer. </h2>
+
+            <ul>
+              <li> Specialised in the Game Development sector, with general information technology (IT) knowledge. </li>
+              
+              <li> 
+                Proficient in 
+                <b> 
+                  <span style="color: #ff8f3d">HTML</span>, 
+                  <span style="color: #5daeff">CSS</span>, 
+                  <span style="color: #ffeb4e"> Javascript </span>, 
+                  <span style="color: #76ff61">mySQL</span>, 
+                  <span style="color: #8e6aff">C#</span>, and
+                  <span style="color: #ff74ed">C++</span>
+                </b>.
+              </li>
+
+              <li> Experienced in 
+                <b> 
+                  <span style="color: #67e8ba"> Unity Engine </span> and 
+                  <span style="color: #ff4b4b"> Unreal Engine  </span>
+                </b>. 
+              </li>
+
+              <li> Interested in Game Design, Computer Graphics and Game Engines. </li>
+            </ul>
+
+            <p> Currently studying OpenGL frameworks, and planning to progress to DirectX3D 11 next.</p>
+
+            <address> 
+              <p> If you are interested in contacting me, please email me at: </p>
+              <a href="mailto:tusciasirdis17@gmail.com" class="email-link"> tusciasirdis17@gmail.com</a> 
+            </address>
           </div>
 
         </div>
 
+        <span class="divider"></span>
         <!-- YouTube Video -->
         <div class="video-template-01 bg">
           <h1> Video of the Day </h1>
           <!-- <iframe src="https://www.youtube.com/embed/P1W8RLEsUC4?si=dtTWbqYmT9gHLjQX" title="YouTube-video-player"
             allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen> -->
-          </iframe>
-
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+          </iframe> -->
           <!-- Video Description -->
           <h2> Work Showcase </h2>
         </div>
 
+        <span class="divider"></span>
         <!-- Additional Navigation -->
         <div class="template-02 bg TW02-RWD">
-          <h1> Additional Resources </h1>
+          <h1> Quick Navigation </h1>
 
           <!-- Navigation Cards -->
           <div>
             <div class="template-02-bg-image">
-              <h1> MOH BMI Calculator </h1>
+              <h1> About Me </h1>
+              <p> A brief introduction and a summary of who I am. </p>
               <a href="https://www.healthhub.sg/programmes/nutrition-hub/bmi-calorie-calculator" target="_blank"
                 class="external-btn"> Learn More </a>
             </div>
 
             <div class="template-02-bg-image">
-              <h1> Bodybuilding Guides </h1>
+              <h1> Professional Works </h1>
+              <p> My professional works and game projects I have finished in my career. </p>
               <a href="https://barbend.com/bodybuilding-for-beginners/" target="_blank" class="external-btn"> Learn More
               </a>
             </div>
 
             <div class="template-02-bg-image">
-              <h1> Dieting Tips & Tricks </h1>
+              <h1> Education </h1>
+              <p> My education background and my personal learning journey from start to finish. </p>
               <a href="https://www.healthline.com/nutrition/how-to-eat-healthy-guide#bottom-line" target="_blank"
                 class="external-btn"> Learn More </a>
             </div>
@@ -137,253 +184,6 @@
         </div>
 
         <a href="#content-top" id="content-bottom" class="content-scroll"> To Top </a> 
-      </div>
-
-      <!-- Bodybuilding Page -->
-      <div class="page" id="page2">
-
-        <!-- Quote -->
-        <div class="quote-wrapper bg">
-          <h1 class="quote"> "Mind Over Matter." </h1>
-          <h1 class="quote"> Sir Charles Lyell </h1>
-        </div>
-
-        <!-- About Bodybuilding Article -->
-        <div class="template-01 bg">
-          <img src="images/bodybuilding/about-bodybuilding.jpg" alt="bodybuilder-lifting-weights">
-          <div class="description-wrapper-01">
-            <h1> What is Bodybuilding? </h1>
-            <p>
-              Bodybuilding is a form of physical training and competitive sport focused on developing and sculpting the
-              muscles of the body to achieve a highly aesthetic physique.
-            </p>
-            <h2> Areas of Bodybuilding We'll Cover: </h2>
-            <ol>
-              <li>
-                Benefits: The types of gains you will yield after practicing bodybuilding for a substantial
-                amount of time.
-              </li>
-              <li>
-                Anatomy: The different types of muscles in your body and what functions they are responsible
-                for individually.
-              </li>
-              <li>
-                Exercises: A list of physical activities you could do to target different muscle groups.
-                This covers arms, legs and back exercises.
-              </li>
-            </ol>
-          </div>
-        </div>
-
-        <!-- Bodybuilding Benefits Article -->
-        <div class="template-01 bg">
-          <div class="description-wrapper-01">
-            <h1> Benefits of Bodybuilding </h1>
-            <ol>
-              <li> Muscle Strength and Endurance: Bodybuilding can help increase muscle strength, endurance, and reduces
-                the risk of injury.</li>
-              <li> Better Sleep: Bodybuilding can promote better sleep quality and help you fall asleep faster.</li>
-              <li>
-                Increased Discipline and Focus: Bodybuilding requires dedication, consistency, and goal-setting,
-                which can improve discipline and focus in all areas of life.
-              </li>
-              <li> Metabolic Health: Building and maintaining muscles helps to burns more calories at rest and improve
-                metabolism.</li>
-              <li> Mental Health Benefits: Bodybuilding can improve your mood, reduce depression and anxiety levels, and
-                enhance your mental well-being.</li>
-            </ol>
-          </div>
-          <img src="images/bodybuilding/benefits.jpg" alt="guy-doing-back-pose">
-        </div>
-
-        <!-- Anatomy Section -->
-        <div class="header-addon bg">
-          <h1> Anatomy </h1>
-          <div class="template-01">
-
-            <!-- Biceps Muscles Article -->
-            <div id="biceps-anatomy">
-              <img src="images/bodybuilding/arms.jpg" alt="human-arm-anatomy">
-              <button id="arm-01">Biceps</button>
-              <button id="arm-02">Triceps</button>
-              <button id="arm-03">Delts</button>
-              <button id="arm-04">Forearm</button>
-            </div>
-            <div class="description-wrapper-01">
-              <h1> Arms Anatomy </h1>
-              <p>
-                Arms are an essential part of our body. They help to maintain strength, mobility and
-                mobility to the point that our everyday life is made easier. When analysing the arm muscles,
-                there are many different muscles that work together perform one complex function.
-              </p>
-              <h2 class="click-tooltip"> (Click on the buttons in the picture to learn more.)</h2>
-              <h2 id="arms-header">[Anatomy part]</h2>
-              <p id="arms-description">[Anatomy description]</p>
-            </div>
-
-            <!-- Back Muscles Article -->
-            <div class="description-wrapper-01">
-              <h1> Back Anatomy </h1>
-              <p>
-                Arms are an essential part of our body. They help to maintain strength, mobility and
-                mobility to the point that our everyday life is made easier. When analysing the arm muscles,
-                there are many different muscles that work together perform one complex function.
-              </p>
-              <h2 class="click-tooltip"> (Click on the buttons in the picture to learn more.)</h2>
-              <h2 id="backs-header">[Anatomy part]</h2>
-              <p id="backs-description">[Anatomy description]</p>
-            </div>
-            <div id="back-anatomy">
-              <img src="images/bodybuilding/backs.jpg" alt="human-back-anatomy">
-              <button id="back-01">Traps</button>
-              <button id="back-02">Rotator Cuff</button>
-              <button id="back-03">Rhomboids</button>
-              <button id="back-04">Lats</button>
-              <button id="back-05">Spine</button>
-            </div>
-
-            <!-- Leg Muscles Article -->
-            <div id="legs-anatomy">
-              <img src="images/bodybuilding/legs.jpg" alt="human-leg-anatomy">
-              <button id="legs-01">Quads</button>
-              <button id="legs-02">Adductor</button>
-              <button id="legs-03">Hamstrings</button>
-              <button id="legs-04">Calf</button>
-            </div>
-            <div class="description-wrapper-01">
-              <h1> Legs Anatomy </h1>
-              <p>
-                The legs play a crucial role in allowing movement from one place to another through walking, running,
-                jumping, and other activities.
-                It also helps in bearing the body's weight and maintaining balance while standing and during physical
-                activities.
-              </p>
-              <h2 class="click-tooltip"> (Click on the buttons in the picture to learn more.)</h2>
-              <h2 id="legs-header">[Anatomy part]</h2>
-              <p id="legs-description">[Anatomy description]</p>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Bodybuidling HTML Form -->
-        <div class="template-03 bg">
-          <h1> Bodybuilding Form </h1>
-          <h2> Test your knowledge on Bodybuilding! </h2>
-          <form id="bodybuilding-form" class="formStyle" method="post"></form>
-          <div id="bodybuilding-results"></div>
-        </div>
-
-      </div>
-
-      <!-- Nutrition Page -->
-      <div class="page" id="page3">
-
-        <!-- Quote -->
-        <div class="quote-wrapper bg">
-          <h1 class="quote"> "You are, what you eat." </h1>
-          <h1 class="quote"> Victor Lindlahr </h1>
-        </div>
-
-        <!-- About Nutrition Summary -->
-        <div class="template-01 bg">
-          <img src="images/nutrition/about-nutrition.jpg" alt="child-holding-basket-of-fruits">
-          <div class="description-wrapper-01">
-            <h1> What is Nutrition? </h1>
-            <p> Nutrition is the focus on obtaining essential nutrients such as carbohydrates, proteins and fats that
-              are important for our body. </p>
-            <p> Good nutrition is crucial for maintaining our body, supporting our immune system, and promoting overall
-              health throughout our lifespan. </p>
-            <h2> Areas of Nutrition We'll Cover: </h2>
-            <ol>
-              <li>
-                Benefits: A list of positive effects you'll observe long term when eating healthily.
-              </li>
-              <li>
-                Macro and Micronutrients: Understanding the importance of the primary and secondary nutrients that are
-                crucial to our body's needs.
-              </li>
-              <li>
-                Recommendations: Guidelines on how to eat healthily, lose weight and improve
-                your overall health.
-              </li>
-            </ol>
-          </div>
-        </div>
-
-        <!-- Nutrition Benefits Article -->
-        <div class="template-01 bg">
-          <div class="description-wrapper-01">
-            <h1> Benefits of Healthy Eating </h1>
-            <ol>
-              <li>
-                Weight Management: A healthy diet can help maintain a healthy weight by providing the right balance of
-                nutrients without excess calories.
-              </li>
-              <li>
-                Reduced Risk of Chronic Diseases: Eating a variety of nutrient-dense foods, such as fruits and
-                vegetables can help lower diseases such as diabetes.
-              </li>
-              <li>
-                Strong Immune System: Nutritious foods rich in vitamins, minerals and antioxidants helps the body in
-                defending against infections and illnesses.
-              </li>
-              <li>
-                Improved Digestive Health: A diet high in fiber, whole grains, and probiotics promotes healthy
-                digestion, prevents constipation, and supports a diverse gut microbiome.
-              </li>
-              <li>
-                Enhanced Skin and Hair Health: Nutrients like vitamins A, C, E, and zinc contribute to healthy skin and
-                hair growth, reducing signs of aging and promoting a youthful appearance.
-              </li>
-            </ol>
-          </div>
-          <img src="images/nutrition/benefits.jpg" alt="benefits-of-healthy-eating">
-        </div>
-
-        <!-- Maronutrients Section -->
-        <div class="header-addon bg">
-          <h1> Macronutrients </h1>
-
-          <div class="template-01">
-
-            <!-- Carbohydrate Food Section -->
-            <img src="images/nutrition/carbohydrate.jpeg" alt="carbohydrate-food">
-            <div class="description-wrapper-01">
-              <h1> Carbohydrates </h1>
-              <p>
-                Carbohydrates are one of the three main macronutrients, alongside proteins and fats, that provide energy
-                for the body.
-                This includes food such as rice, noodles, bread, pastry, desserts.
-              </p>
-              <h2> Types of Carbohydrates </h2>
-              <ol>
-                <li>
-                  Simple Carbohydrates: These are usually called sugar. Examples include glucose, fructose (found in
-                  fruits), sucrose (table sugar), and lactose (found in milk).
-                </li>
-                <li>
-                  Complex Carbohydrates: These are usually food that high in fiber or is starchy. Examples of Starch
-                  food include grains, wheat and rice.
-                  Examples of High Fibre food include fruits, vegetables and whole grains.
-                </li>
-              </ol>
-              <p>
-                Fiber: A micronutrient that the body cannot digest fully, for digestive health and helps regulate bowel
-                movements.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Nutrition Form -->
-        <div class="template-03">
-          <h1> Nutrition Form </h1>
-          <h2> Test your knowledge on Nutrition! </h2>
-          <form id="nutrition-form" class="formStyle" method="post"></form>
-          <div id="nutrition-results"></div>
-        </div>
-
       </div>
 
     </div>
@@ -397,21 +197,21 @@
     <!-- Mobile Footer Menu -->
     <div id="mobile-footer">
 
-      <!-- Navigation Footer -->
-      <div class="mobile-footer-container">
-        <button id="footerLink1"> Quick-Navigation + </button>
+    <!-- Navigation Footer -->
+    <div class="mobile-footer-container">
+        <button id="footerLink1"><b> Quick-Navigation + </b></button>
 
         <!-- Navigation Links -->
         <div id="MFooterL1">
-          <button id="page1btn3" class="m-footer-btn"> Home </button>
-          <button id="page2btn3" class="m-footer-btn"> Works </button>
-          <button id="page3btn3" class="m-footer-btn"> Education </button>
+          <a href="index.html" class="m-footer-btn"> Home </a>
+          <a href="hobbies.html" class="m-footer-btn"> Works </a>
+          <a href="education.html" class="m-footer-btn"> Education </a>
         </div>
       </div>
 
       <!-- Website Contact Information -->
       <div class="mobile-footer-container">
-        <button id="footerLink2"> Contact + </button>
+        <button id="footerLink2"><b> Contact + </b></button>
         <div id="MFooterL2">
           <h2 class="footer-contact-text"> +(65) 8795 2650 </h2>
           <h2 class="footer-contact-text"> tusciasirdis17@gmail.com </h2>
@@ -431,9 +231,9 @@
 
         <!-- Navigation Links -->
         <nav id="footer-links">
-          <button id="page1btn4" class="m-footer-btn"> Home </button>
-          <button id="page2btn4" class="m-footer-btn"> Works </button>
-          <button id="page3btn4" class="m-footer-btn"> Education </button>
+          <a href="index.html" class="m-footer-btn"> Home </a>
+          <a href="hobbies.html" class="m-footer-btn"> Works </a>
+          <a href="education.html" class="m-footer-btn"> Education </a>
         </nav>
 
         <!-- Website Contact Information -->
@@ -447,7 +247,7 @@
       <!-- Legal Information -->
       <div class="footer-bottom">
         <p> Copyright © 2024 Loong Gui Cheng. All rights reserved. </p>
-        <p> Last Updated: January 9th, 2025</p>
+        <p> Last Updated: January 10th, 2025</p>
       </div>
 
     </div>

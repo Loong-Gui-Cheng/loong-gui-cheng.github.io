@@ -1,0 +1,190 @@
+/* Text Style Formatting */
+  @font-face {
+    font-family: Rubik;
+    src: url(../fonts/rubik-regular.ttf);
+  }
+  
+  @font-face {
+    font-family: Rubik;
+    src: url(../fonts/rubik-medium.ttf);
+    font-weight: bold;
+  }
+  
+  @font-face {
+    font-family: Roboto;
+    src: url(../fonts/roboto-regular.ttf);
+  }
+
+
+  
+/***********************/
+/* General CSS Styling */
+/***********************/
+  body.main {
+    position: relative;
+    background-attachment: scroll;
+    margin: 0;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  p, ol, li, h1, h2, h3, h4, h5, tr, td, input, label, a {
+    color: white;
+    font-style: normal;
+    margin: 0;
+  }
+  
+  h1, h2, h3, h4, h5, tr, td, input, label {
+    font-family: Rubik, Helvetica, Arial, sans-serif;
+  }
+  
+  p, ol, li, a {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+  }
+  
+  html
+  {
+    width: 100%;
+    height: 100%;
+    background-color: #121212;
+  }
+  
+  #window-context
+  {
+    background-attachment: scroll;
+    margin: 0;
+    height: 100%;
+    font-size: 100%;
+  }
+  
+  /************************************************/
+  /***********Website Layout Formatting************/
+  /*Everything related to the root of the website.*/
+  /************************************************/
+  #view-context
+  {
+    display: grid;
+    grid-template-rows: auto 8fr;
+  }
+  
+  #banner-context
+  {
+    display: block;
+    text-align: center;
+    align-content: center;
+    max-width: 100%;
+    width: 100%;
+    height: calc(350px + 20vw);
+    background-size: cover;
+    background-position: top;
+  }
+  
+  h1.banner-text
+  {
+    font-size: calc(2rem + 2vw);
+    color: white;
+  }
+  
+  #page-context
+  {
+    padding: 40px 0;
+  }
+  
+  .page
+  {
+    display: grid;
+    row-gap: 60px;
+    padding: 40px;
+  }
+  
+  .quote-wrapper
+  {
+    display: flex;
+    flex-flow: column wrap;
+    padding-inline: 40px;
+  }
+  
+  .quote
+  {
+    font-size: calc(1.5rem + 1vw);
+    text-align: center;
+  }
+  
+  /* Quality Of Life Scroll Page */
+  .content-scroll {
+    padding: 10px 20px;
+    border-radius: 5px;
+    justify-self: center;
+  
+    background-color: #656363;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
+  }
+  
+  .content-scroll:hover {
+    box-shadow: 0px 0px 2px 5px rgb(69, 69, 69);
+    background-color: white;
+    color: black;
+  }
+  
+  /* Section Dividers */
+  span.divider {
+    background-color: rgb(50 50 50);
+    width: 35%;
+    height: 5px;
+    border-radius: 5px;
+    justify-self: center;
+  }
+
+/**************************/
+/*     CSS Animations     */
+/**************************/
+.fade-in
+{
+  animation-name: fade;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+
+@keyframes fade {
+  0% { opacity: 0%; } 10% { opacity: 10%; } 20% { opacity: 20%; }
+  30% { opacity: 30%; } 40% { opacity: 40%; } 50% { opacity: 50%; }
+  60% { opacity: 60%; } 70% { opacity: 70%; } 80% { opacity: 80%; }
+  90% { opacity: 90%; } 100% { opacity: 100%; }
+}
+
+.loading-screen
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 2;
+}
+
+.loading-square {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+}
+
+.loading-in 
+{
+  animation-name: load;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes load {
+  0% {top:65%; left: 60%}
+  25% {top: 35%; left: 60%}
+  50% {top: 35%; left: 30%}
+  75% {top: 65%; left: 30%}
+  100% {top:65%; left: 60%}
+}

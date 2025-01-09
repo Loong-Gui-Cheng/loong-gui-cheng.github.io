@@ -1,0 +1,150 @@
+/*************************/
+/* Responsive Web Design */
+/*************************/
+
+/* Mobile Mode */
+@media screen and (max-width: 800px)
+{
+  /*********************/
+  /*   Mobile Footer   */
+  /*********************/
+  #mobile-footer
+  {
+    display: flex;
+    flex-flow: column wrap;
+    height: 100%;
+    background-color: rgb(29, 30, 36);
+    padding: 20px 20px 100px 20px;
+  }
+
+  #desktop-footer
+  {
+    display: none;
+  }
+}
+
+/* Desktop Mode */
+@media screen and (min-width: 801px)
+{
+   /*****************************/
+   /*   Enable Desktop Footer   */
+   /*****************************/
+   #mobile-footer
+   {
+     display: none;
+   }
+
+   #desktop-footer
+   {
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 5px;
+    justify-items: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+    background-color: rgb(29, 30, 36);
+   }
+}
+
+
+
+/*****************/
+/*    Footer     */
+/*****************/
+.footer-top
+{
+  display: grid;
+  grid-template-rows: 4fr 16fr;
+  grid-template-columns: auto auto;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(29, 30, 36);
+}
+
+h1.footer-headers
+{
+  font-size: 1.8rem;
+  color: white;
+}
+
+.footer-contact-text
+{
+  font-size: 1rem;
+  color: #E0E1EA;
+}
+
+.footer-bottom
+{
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  border-top: 1px solid rgb(86 89 107);
+  padding: 20px 0px;
+}
+
+.footer-bottom > p
+{
+  color: white;
+}
+
+#footer-socials, #footer-links
+{
+ display: flex;
+ flex-flow: column nowrap;
+ height: 100%;
+ padding: 1vw;
+}
+
+#footer-links > a 
+{
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.mobile-footer-container > button
+{
+  display: block;
+  color: white;
+  background-color: rgb(29, 30, 36);
+  border-width: 1px 0 0 0;
+  border-style: solid;
+  border-color: rgb(86, 89, 107);
+  text-align: left;
+  font-family: Rubik, Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  text-align-last: justify;
+}
+
+.mobile-footer-container > div
+{
+  display: none;
+  flex-flow: column nowrap;
+  width: max-content;
+  padding: 15px 15px 15px 30px;
+}
+
+.m-footer-btn
+{
+  height: 33%;
+  color: #E0E1EA;
+  font-size: 1rem;
+  background-color: rgb(29, 30, 36);
+  padding: 5px 0px;
+  border: 0px;
+  text-align: left;
+  text-decoration: none;
+}
+
+
+.m-footer-btn:hover
+{
+  text-decoration: underline;
+  cursor: pointer;
+}

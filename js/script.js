@@ -1,106 +1,3 @@
-// Question Datasets as an Array string literal
-let bodybuildingDataset = [
-  {
-    "QID": "1",
-    "QuestionStem": "Which muscle is primarily responsible for flexing the elbow joint?",
-    "OptionA": "Biceps brachii",
-    "OptionB": "Triceps brachii",
-    "OptionC": "Deltoid",
-    "OptionD": "Latissimus dorsi",
-    "CorrectAns": "Biceps brachii"
-  },
-  {
-    "QID": "2",
-    "QuestionStem": "Which of the following actions is primarily performed by the triceps brachii muscle?",
-    "OptionA": "Elbow flexion",
-    "OptionB": "Shoulder abduction",
-    "OptionC": "Elbow extension",
-    "OptionD": "Forearm supination",
-    "CorrectAns": "Elbow extension"
-  },
-  {
-    "QID": "3",
-    "QuestionStem": "Which muscle is primarily responsible for shoulder adduction, extension, and internal rotation?",
-    "OptionA": "Trapezius",
-    "OptionB": "Latissimus dorsi",
-    "OptionC": "Rhomboid major",
-    "OptionD": "Supraspinatus",
-    "CorrectAns": "Latissimus dorsi"
-  },
-  {
-    "QID": "4",
-    "QuestionStem": "Which muscle is involved in scapular retraction and is commonly targeted in exercises like rows and scapular squeezes?",
-    "OptionA": "Latissimus dorsi",
-    "OptionB": "Trapezius",
-    "OptionC": "Supraspinatus",
-    "OptionD": "Subscapularis",
-    "CorrectAns": "Trapezius"
-  },
-  {
-    "QID": "5",
-    "QuestionStem": "Which of the following movements is primarily controlled by the deltoid muscle?",
-    "OptionA": "Shoulder abduction",
-    "OptionB": "Scapular retraction",
-    "OptionC": "Elbow extension",
-    "OptionD": "Hip flexion",
-    "CorrectAns": "Shoulder abduction"
-  }
-];
-
-let nutritionDataset = [
-  {
-    "QID": "1",
-    "QuestionStem": "Which of the following nutrients is primarily responsible for providing energy to the body?",
-    "OptionA": "Carbohydrates",
-    "OptionB": "Protein",
-    "OptionC": "Fats",
-    "OptionD": "Fiber",
-    "CorrectAns": "Carbohydrates"
-  },
-  {
-    "QID": "2",
-    "QuestionStem": "Which of the following foods is a significant source of omega-3 fatty acids?",
-    "OptionA": "Beef",
-    "OptionB": "Salmon",
-    "OptionC": "White bread",
-    "OptionD": "Rice",
-    "CorrectAns": "Salmon"
-  },
-  {
-    "QID": "3",
-    "QuestionStem": "Which food group is the primary source of carbohydrates?",
-    "OptionA": "Meat and alternatives",
-    "OptionB": "Dairy products",
-    "OptionC": "Fruits and vegetables",
-    "OptionD": "Grains and cereals",
-    "CorrectAns": "Grains and cereals"
-  },
-  {
-    "QID": "4",
-    "QuestionStem": "Which of the following statements about protein and weight loss is true?",
-    "OptionA": "High-protein diets have been shown to decrease metabolism.",
-    "OptionB": "Protein helps increase feelings of fullness and satiety.",
-    "OptionC": "Protein is primarily stored as fat in the body.",
-    "OptionD": "Low-protein diets are more effective for maintaining muscle mass during weight loss.",
-    "CorrectAns": "Protein helps increase feelings of fullness and satiety."
-  },
-  {
-    "QID": "5",
-    "QuestionStem": "What role does protein play in a weight loss diet?",
-    "OptionA": "Provides a quick source of energy",
-    "OptionB": "Increases water retention in the body",
-    "OptionC": "Helps preserve lean muscle mass",
-    "OptionD": "Reduces absorption of vitamins and minerals",
-    "CorrectAns": "Helps preserve lean muscle mass"
-  }
-];
-
-
-// Display home page upon landing
-displayPage(1, "Home", "url(images/index-banner.jpeg)");
-// displayPage(2, "Bodybuilding", "url(images/bodybuilding/bodybuilding-banner.jpg)");
-// displayPage(3, "Nutrition", "url(images/nutrition/nutrition-banner.jpg)");
-
 // Target event listeners elements
 const hamIcon = document.getElementById("hamIcon");
 const footerLink1 = document.getElementById("footerLink1");
@@ -118,17 +15,8 @@ footerLink2.addEventListener("click", function(){
   displayElement('MFooterL2', 'flex', true);
 });
 
-// Add all the questions to relevant forms
-addQns(nutritionDataset, 'nutrition-form', 'nutrition_', 'nutrition-results');
-addQns(bodybuildingDataset, 'bodybuilding-form', 'bodybuilding_', 'bodybuilding-results');
-
-preventFormRedirect();
-
-addPageListener();
-addImageMapListeners();
-
 // CSS Finishing Touches
-
+playLoading();
 
 
 
@@ -361,15 +249,6 @@ function addPageListener()
   page2btn.addEventListener("click", function(){displayPage(2, "Works", "url(images/index-banner.jpeg)");});
   page2btn = document.getElementById("page2btn4");
   page2btn.addEventListener("click", function(){displayPage(2, "Works", "url(images/index-banner.jpeg)");});
-
-  let page3btn = document.getElementById("page3btn1");
-  page3btn.addEventListener("click", function(){displayPage(3, "Education", "url(images/index-banner.jpeg)");});
-  page3btn = document.getElementById("page3btn2");
-  page3btn.addEventListener("click", function(){displayPage(3, "Education", "url(images/index-banner.jpeg)");});
-  page3btn = document.getElementById("page3btn3");
-  page3btn.addEventListener("click", function(){displayPage(3, "Education", "url(images/index-banner.jpeg)");});
-  page3btn = document.getElementById("page3btn4");
-  page3btn.addEventListener("click", function(){displayPage(3, "Education", "url(images/index-banner.jpeg)");});
 
   // const pages = [page1btn, page2btn, page3btn];
   // // Loop through all pages of the website.
