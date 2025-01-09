@@ -97,7 +97,7 @@ let nutritionDataset = [
 
 
 // Display home page upon landing
-displayPage(1, "Home", "url(images/home/home-banner.jpg)");
+displayPage(1, "Home", "url(images/index-banner.jpeg)");
 // displayPage(2, "Bodybuilding", "url(images/bodybuilding/bodybuilding-banner.jpg)");
 // displayPage(3, "Nutrition", "url(images/nutrition/nutrition-banner.jpg)");
 
@@ -128,7 +128,6 @@ addPageListener();
 addImageMapListeners();
 
 // CSS Finishing Touches
-alternateBGColour();
 
 
 
@@ -346,31 +345,31 @@ function addPageListener()
   // NOTE: There is a "better" way to do this, but to satisfy JAVASCRIPT VALIDATOR, it has to be this way.
   // Target all page 1, 2 and 3 buttons.
   let page1btn = document.getElementById("page1btn1");
-  page1btn.addEventListener("click", function(){displayPage(1, "Home", "url(images/home/home-banner.jpg)");});
+  page1btn.addEventListener("click", function(){displayPage(1, "Home", "url(images/index-banner.jpeg)");});
   page1btn = document.getElementById("page1btn2");
-  page1btn.addEventListener("click", function(){displayPage(1, "Home", "url(images/home/home-banner.jpg)");});
+  page1btn.addEventListener("click", function(){displayPage(1, "Home", "url(images/index-banner.jpeg)");});
   page1btn = document.getElementById("page1btn3");
-  page1btn.addEventListener("click", function(){displayPage(1, "Home", "url(images/home/home-banner.jpg)");});
+  page1btn.addEventListener("click", function(){displayPage(1, "Home", "url(images/index-banner.jpeg)");});
   page1btn = document.getElementById("page1btn4");
-  page1btn.addEventListener("click", function(){displayPage(1, "Home", "url(images/home/home-banner.jpg)");});
+  page1btn.addEventListener("click", function(){displayPage(1, "Home", "url(images/index-banner.jpeg)");});
 
   let page2btn = document.getElementById("page2btn1");
-  page2btn.addEventListener("click", function(){displayPage(2, "Bodybuilding", "url(images/bodybuilding/bodybuilding-banner.jpg)");});
+  page2btn.addEventListener("click", function(){displayPage(2, "Works", "url(images/index-banner.jpeg)");});
   page2btn = document.getElementById("page2btn2");
-  page2btn.addEventListener("click", function(){displayPage(2, "Bodybuilding", "url(images/bodybuilding/bodybuilding-banner.jpg)");});
+  page2btn.addEventListener("click", function(){displayPage(2, "Works", "url(images/index-banner.jpeg)");});
   page2btn = document.getElementById("page2btn3");
-  page2btn.addEventListener("click", function(){displayPage(2, "Bodybuilding", "url(images/bodybuilding/bodybuilding-banner.jpg)");});
+  page2btn.addEventListener("click", function(){displayPage(2, "Works", "url(images/index-banner.jpeg)");});
   page2btn = document.getElementById("page2btn4");
-  page2btn.addEventListener("click", function(){displayPage(2, "Bodybuilding", "url(images/bodybuilding/bodybuilding-banner.jpg)");});
+  page2btn.addEventListener("click", function(){displayPage(2, "Works", "url(images/index-banner.jpeg)");});
 
   let page3btn = document.getElementById("page3btn1");
-  page3btn.addEventListener("click", function(){displayPage(3, "Nutrition", "url(images/nutrition/nutrition-banner.jpg)");});
+  page3btn.addEventListener("click", function(){displayPage(3, "Education", "url(images/index-banner.jpeg)");});
   page3btn = document.getElementById("page3btn2");
-  page3btn.addEventListener("click", function(){displayPage(3, "Nutrition", "url(images/nutrition/nutrition-banner.jpg)");});
+  page3btn.addEventListener("click", function(){displayPage(3, "Education", "url(images/index-banner.jpeg)");});
   page3btn = document.getElementById("page3btn3");
-  page3btn.addEventListener("click", function(){displayPage(3, "Nutrition", "url(images/nutrition/nutrition-banner.jpg)");});
+  page3btn.addEventListener("click", function(){displayPage(3, "Education", "url(images/index-banner.jpeg)");});
   page3btn = document.getElementById("page3btn4");
-  page3btn.addEventListener("click", function(){displayPage(3, "Nutrition", "url(images/nutrition/nutrition-banner.jpg)");});
+  page3btn.addEventListener("click", function(){displayPage(3, "Education", "url(images/index-banner.jpeg)");});
 
   // const pages = [page1btn, page2btn, page3btn];
   // // Loop through all pages of the website.
