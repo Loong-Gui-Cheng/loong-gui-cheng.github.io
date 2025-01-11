@@ -89,14 +89,15 @@
   
   #page-context
   {
-    padding: 40px 0;
+    padding: 10px 0;
   }
   
   .page
   {
     display: grid;
-    row-gap: 60px;
-    padding: 40px;
+    height: 100%;
+    row-gap: 30px;
+    padding: 8vw;
   }
   
   .quote-wrapper

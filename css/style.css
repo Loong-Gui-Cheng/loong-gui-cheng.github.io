@@ -20,23 +20,12 @@
   /*****************************************************/
   /* Make External Links Container Wrap Responsively.  */
   /*****************************************************/
-  .TW02-RWD
-  {
-    align-items: center;
-    row-gap: 5px;
-  } 
-
-  .TW02-RWD > div
+  .template-02 > div 
   {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    row-gap: 20px;
-  }
-
-  .TW02-IMG-RWD
-  {
-    max-width: 300px;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    row-gap: 10px;
   }
 }
 
@@ -50,18 +39,18 @@
   {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 40px;
+    column-gap: 20px;
     row-gap: 20px;
-    padding-inline: 4vw;
   }
 
   /*****************************************************/
   /* Expand External Links Container to standard row   */
   /*****************************************************/
-  .TW02-RWD > div
+  .template-02 > div 
   {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
     column-gap: 10px;
   }
 }
@@ -85,17 +74,14 @@
 }
 
 .template-01 > img, .template-01 > div > img
-{
-  width: 100%;
-  height: auto;
-  max-width: 450px;
-  max-height: 450px;
-  object-fit: cover;
-  background-position: center;
-  background-size: cover;
-  justify-self: center;
-  align-self: center;
-}
+  {
+    width: 100%;
+    height: 100%;
+    max-height: 450px;
+    object-fit: contain;
+    justify-self: center;
+    align-self: center;
+  }
 
 .description-wrapper-01
 {
@@ -170,23 +156,17 @@ h2.c-header-01
   row-gap: 40px;
 }
 
-.template-02 > div 
-{
-  width: 100%;
-  justify-content: center;
-}
-
 .template-02-bg-image
 {
   display: flex;
   flex-flow: column nowrap;
+  flex: 1;
   background-color: rgb(26, 25, 25);
   background-blend-mode: darken;
   background-size: cover;
   background-position: center;
   justify-content: center;
   align-items: center;
-  min-width: 280px;
   min-height: 550px;
   row-gap: 30px;
   transition: box-shadow 0.5s;
@@ -303,6 +283,12 @@ h2.c-header-01
   background-color: white;
 }
 
+iframe.maps {
+  width: 100%;
+  min-height: 450px;
+  height: 100%;
+}
+
 /******************************************/
 /*        Forms General Styling           */
 /******************************************/
@@ -329,7 +315,6 @@ form > input
   flex-flow: column nowrap;
   row-gap: 10px;
   align-items: center;
-  padding: 30px 6vw;
 }
 
 .video-template-01 > h1, .video-template-01 > h2, .video-template-01 > iframe
