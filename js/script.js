@@ -1,24 +1,8 @@
-// Target event listeners elements
-const hamIcon = document.getElementById("hamIcon");
-const footerLink1 = document.getElementById("footerLink1");
-const footerLink2 = document.getElementById("footerLink2");
-
-hamIcon.addEventListener("click", function(){
-  displayElement('hamburger-menu', 'grid', false);
-});
-
-footerLink1.addEventListener("click", function(){
-  displayElement('MFooterL1', 'flex', true);
-});
-
-footerLink2.addEventListener("click", function(){
-  displayElement('MFooterL2', 'flex', true);
-});
+// Add animation listeners
+setAnimation();
 
 // CSS Finishing Touches
 playLoading();
-
-
 
 // Function to enter fullscreen mode
 if (document.documentElement.requestFullscreen) {
@@ -42,6 +26,10 @@ if (document.documentElement.requestFullscreen) {
 }
 
 
+
+/************************************************************************************************/
+/*@brief: Enables full screen mode for web application.******************************************/
+/************************************************************************************************/
 function enterFullscreen() {
   if (document.documentElement.requestFullscreen) {
     document.documentElement.requestFullscreen();
@@ -66,49 +54,26 @@ function exitFullscreen() {
   }
 }
 
+/************************************************************************************************/
+/*@brief: This function adds a generic animation to an element/button****************************/
+/************************************************************************************************/
+function setAnimation() {
+  // Target event listeners elements
+  const hamIcon = document.getElementById("hamIcon");
+  const footerLink1 = document.getElementById("footerLink1");
+  const footerLink2 = document.getElementById("footerLink2");
 
-function updateAnatomyMap(headerID, descriptionID, headerText, descriptionText)
-{
-  const anatomyPartHeader = document.getElementById(headerID);
-  const anatomyPartDescription = document.getElementById(descriptionID);
+  hamIcon.addEventListener("click", function(){
+    displayElement('hamburger-menu', 'grid', false);
+  });
 
-  anatomyPartHeader.innerText = headerText;
-  anatomyPartDescription.innerText = descriptionText;
+  footerLink1.addEventListener("click", function(){
+    displayElement('MFooterL1', 'flex', true);
+  });
 
-  playAnimation(anatomyPartHeader, "fade-in", 1000);
-  playAnimation(anatomyPartDescription, "fade-in", 1000);
-}
-
-function addImageMapListeners()
-{
-  const armBtn1 = document.getElementById('arm-01');
-  const armBtn2 = document.getElementById('arm-02');
-  const armBtn3 = document.getElementById('arm-03');
-  const armBtn4 = document.getElementById('arm-04');
-  armBtn1.addEventListener('click', function(){updateAnatomyMap('arms-header', 'arms-description', 'Biceps', "The primary function of the biceps brachii is to flex (bend) the elbow joint. This action is crucial for movements such as lifting, curling, and pulling objects towards the body." + " The biceps also assists in supination of the forearm, which is the movement that turns the palm of the hand upward or forward.");});
-  armBtn2.addEventListener('click', function(){updateAnatomyMap('arms-header', 'arms-description', 'Triceps', "The primary function of the triceps brachii is to extend (straighten) the elbow joint. This action is crucial for movements such as pushing, lifting, and extending the arm.");});
-  armBtn3.addEventListener('click', function(){updateAnatomyMap('arms-header', 'arms-description', 'Delts', "The deltoid muscles are responsible for several movements of the shoulder joint, including lifting the arm forward, lifting the arm sideways away from the body, moving the arm backward." + " The deltoid muscles help stabilize the shoulder joint during arm movements, providing support and preventing dislocations.");});
-  armBtn4.addEventListener('click', function(){updateAnatomyMap('arms-header', 'arms-description', 'Forearms', "The forearm muscles play a crucial role in flexing, extending, and rotating the wrist joint. These movements are essential for tasks that require precise manipulation, such as writing, typing, and playing musical instruments." + " Forearm muscles contribute to overall arm strength and stability, supporting activities like lifting, carrying, and pushing objects.");});
-
-  const backsBtn1 = document.getElementById('back-01');
-  const backsBtn2 = document.getElementById('back-02');
-  const backsBtn3 = document.getElementById('back-03');
-  const backsBtn4 = document.getElementById('back-04');
-  const backsBtn5 = document.getElementById('back-05');
-  backsBtn1.addEventListener('click', function(){updateAnatomyMap('backs-header', 'backs-description', 'Trapezius', "The trapezius muscle plays a crucial role in movements involving the shoulder and neck, including lifting the shoulder toward the ear, pulling the shoulder blades together toward the spine," + " and tilting and turning the head.");});
-  backsBtn2.addEventListener('click', function(){updateAnatomyMap('backs-header', 'backs-description', 'Rotator Cuff', "The primary function of the rotator cuff muscles is to stabilize the shoulder joint, keeping the head of the humerus (upper arm bone) securely within the shallow socket of the scapula (glenoid cavity)." + " They contribute to both internal and external rotation of the arm, which are essential for various activities like reaching overhead, throwing, and lifting objects.");});
-  backsBtn3.addEventListener('click', function(){updateAnatomyMap('backs-header', 'backs-description', 'Rhomboids', "The rhomboids muscle pulls the scapula towards the spine, which helps to bring the shoulder blades closer together." + " It also assists in stabilizing the scapula during movements of the shoulder and arm." + " They also aid in maintaining proper posture by counteracting the forward pull of muscles in the chest and shoulders.");});
-  backsBtn4.addEventListener('click', function(){updateAnatomyMap('backs-header', 'backs-description', 'Latissimus dorsi', "The primary function of the latissimus dorsi (lats) muscle is shoulder adduction, extension, and internal rotation." + " It also assists in various movements involving the shoulder and upper limb, such as pulling the shoulder downward and backward (shoulder extension), rotating the shoulder internally (medial rotation), and aiding in arm adduction (bringing the arm towards the body).");});
-  backsBtn5.addEventListener('click', function(){updateAnatomyMap('backs-header', 'backs-description', 'Spine', "The spine allows for a wide range of movements, including bending forward (flexion), bending backward (extension), twisting (rotation), and bending sideways (lateral flexion). These movements are facilitated by the joints between adjacent vertebrae and the flexibility of the spinal column.");});
-  
-  const legsBtn1 = document.getElementById('legs-01');
-  const legsBtn2 = document.getElementById('legs-02');
-  const legsBtn3 = document.getElementById('legs-03');
-  const legsBtn4 = document.getElementById('legs-04');
-  legsBtn1.addEventListener('click', function(){updateAnatomyMap('legs-header', 'legs-description', 'Quadriceps', "The quadriceps muscles work together to extend (straighten) the knee joint. They are powerful extensors of the knee, allowing movements such as kicking, jumping, and running." + " The rectus femoris also assists in flexing the hip joint, which is important for activities like walking and climbing stairs.");});
-  legsBtn2.addEventListener('click', function(){updateAnatomyMap('legs-header', 'legs-description', 'Adductors', "The adductor muscles contribute to stabilizing the hip joint, especially during movements that involve weight-bearing and changes in direction." + " It also brings the thigh towards the midline of the body and may also assist in flexion (bending) and extension (straightening) of the thigh.");});
-  legsBtn3.addEventListener('click', function(){updateAnatomyMap('legs-header', 'legs-description', 'Hamstrings', "The hamstrings muscles assist in extending (moving the thigh backward) the hip joint." + " It also flex (bend) the knee joint, pulling the lower leg backward and also assist in medial (inward) and lateral (outward) rotation of the knee joint.");});
-  legsBtn4.addEventListener('click', function(){updateAnatomyMap('legs-header', 'legs-description', 'Calves', "The calf muscles help stabilize the ankle joint, especially during weight-bearing activities." + " The gastrocnemius also assists in bending the knee joint (knee flexion) when the foot is lifted off the ground.");});
+  footerLink2.addEventListener("click", function(){
+    displayElement('MFooterL2', 'flex', true);
+  });
 }
 
 /************************************************************************************************/
@@ -281,169 +246,4 @@ function addPageListener()
     // }
   // }
 
-}
-
-/********************************************************************************************************/
-/*@brief: This function prevents forms from redirecting to another html page. (Mainly only used for JS).*/
-/********************************************************************************************************/
-function preventFormRedirect()
-{
-  function handleForm(event)
-  {
-    event.preventDefault();
-  }
-  const form = document.getElementsByTagName('form');
-  for (let i = 0; i < form.length; i++)
-    form[i].addEventListener('submit', handleForm);
-}
-
-/*************************************************************************************/
-/*@brief: This is a generic function that adds questions to a HTML form.**************/
-/*@param - dataset: An array that contains all the questions for a form.**************/
-/*@param - formID: the identification of the HTML form element.***********************/
-/*@param - optionName: name of the option input for labelling*************************/
-/*@param - resultsID: identification of the element to display results in.************/
-/*************************************************************************************/
-function addQns(dataset, formID, optionName, resultsID)
-{
-  // Loop through all the questions in the dataset
-  for (let i = 0; i < dataset.length; i++)
-  {
-    // Add a wrapper that will contain the entire question.
-    const qnWrapper = document.createElement('div');
-    qnWrapper.classList.add("question-box");
-
-    const qnHeader = document.createElement('h3');
-    qnHeader.innerText = "Q" + (i+1).toString() + ": " + dataset[i].QuestionStem;
-
-    const optionWrapper = document.createElement('div');
-    
-    //Select a number from 1 - 4 for randomise loop.
-    let randomNum = Math.floor(Math.random() * 4) + 1;
-    let randOptions = ['A', 'B', 'C', 'D'];
-    let randOptionAns = [dataset[i].OptionA, dataset[i].OptionB, dataset[i].OptionC, dataset[i].OptionD];
-    let tempOption = ' ';
-    let tempAns = ' ';
-
-    //Randomise Option Sequence for each question.
-    for (let r = 0; r < randomNum; r++){
-      tempOption = randOptions[0];
-      randOptions[0] = randOptions[1];
-      randOptions[1] = randOptions[2];
-      randOptions[2] = randOptions[3];
-      randOptions[3] = tempOption;
-
-      tempAns = randOptionAns[0];
-      randOptionAns[0] = randOptionAns[1];
-      randOptionAns[1] = randOptionAns[2];
-      randOptionAns[2] = randOptionAns[3];
-      randOptionAns[3] = tempAns;
-    }
-  
-    // Loop through all the options available for one question.
-    for (let c = 0; c < 4; c++){
-      const option = document.createElement('input');
-      option.type = "radio";
-      option.name = optionName + dataset[i].QID;
-      option.required = true;
-      let identification = ' ';
-      let optionLabel = document.createElement('LABEL');
-
-      identification = randOptions[c] + i.toString() + formID;
-      option.value = randOptionAns[c];
-      optionLabel.innerText = randOptionAns[c];
-
-      option.id = identification;
-      optionLabel.setAttribute("for", identification);
-
-      // Append the available choices to its own option container.
-      optionWrapper.append(option);
-      optionWrapper.append(optionLabel);
-    }
-
-    // Append the option container to its own question container.
-    qnWrapper.append(qnHeader);
-    qnWrapper.append(optionWrapper);
-
-    // Append the question to the form
-    document.getElementById(formID).append(qnWrapper);
-  }
-  // Repeat until all questions are pinned.
-  const submitBtn = document.createElement('input');
-  submitBtn.type = 'submit';
-  document.getElementById(formID).append(submitBtn);
-
-  // Add form validation
-  document.getElementById(formID).addEventListener('submit', function(){
-    validateForm(dataset, formID, optionName, resultsID);
-  });
-}
-
-
-/*************************************************************************************/
-/*@brief: This is a generic function that validates HTML forms based on their ID.*****/
-/*@param - dataset: An array that contains all the questions for a form.**************/
-/*@param - formID: identification of the HTML form element.***************************/
-/*@param - optionName: name of the option input for labelling*************************/
-/*@param - resultsID: identification of the element to display results in.************/
-/*This is already called in addQns(), so no need to call it manually.*****************/
-/*************************************************************************************/
-function validateForm(dataset, formID, optionName, resultsID)
-{
-  const displayResults = document.getElementById(resultsID);
-  // Reset result texts if there is any previous attempts.
-  if (displayResults.hasChildNodes()){
-    for (let i = 0; i < displayResults.childElementCount + 1; i++){
-      displayResults.removeChild(displayResults.lastChild);
-    }
-  }
-
-  // Set-up variables for grading quiz.
-  const questions = document.querySelectorAll("#" + formID + " > div");
-  let totalQns = questions.length;
-  let correctAns = 0;
-  const totalGrade = document.createElement('p');
-  const qnsWrong = document.createElement('p');
-  let wrongQns = [];
-
-  // Grade Quiz
-  for (let i = 0; i < totalQns; i++)
-  {
-    const qnID = optionName + (i + 1).toString();
-    const answer = document.querySelector('input[name="' + qnID + '"]:checked').value;
-    if (answer == dataset[i].CorrectAns) { correctAns++;}
-    else { wrongQns.push((i+1).toString());}
-  }
-
-  // Check if user has made any previous mistakes
-  if (wrongQns.length > 0)
-  {
-    qnsWrong.innerText = "However, you still can improve by checking your answers for Question ";
-    for (let i = 0; i < wrongQns.length; i++)
-    {
-      // Text Formatting
-      qnsWrong.innerText += wrongQns[i];
-      if (wrongQns.length > 1)
-      {
-          if (i == wrongQns.length - 2){
-            qnsWrong.innerText += " and ";
-          }
-          else if (i != wrongQns.length - 1){
-            qnsWrong.innerText += ", ";
-          }
-      }
-    }
-
-    // Display Results
-    totalGrade.innerText = "You got " + correctAns.toString() + " / " + totalQns.toString() + " correct!";
-
-    qnsWrong.innerText += " again!";
-    totalGrade.classList.add("fade-in");
-    qnsWrong.classList.add("fade-in");
-
-    displayResults.append(totalGrade);
-    displayResults.append(qnsWrong);
-  }
-  // Reset all form inputs
-  document.getElementById(formID).reset();
 }

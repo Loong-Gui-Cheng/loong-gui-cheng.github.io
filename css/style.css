@@ -346,3 +346,15 @@ form > input
   height:calc(250px + 20vw);
   max-height: 600px;
 }
+
+.video-swap-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  justify-self: center;
+
+  background-color: rgb(29, 30, 36);
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-family: Rubik, Arial, Helvetica, sans-serif;
+}
