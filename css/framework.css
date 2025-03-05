@@ -43,6 +43,10 @@
   p, ol, li, a {
     font-family: Roboto, Helvetica, Arial, sans-serif;
   }
+
+  div {
+    color: white;
+  }
   
   html
   {

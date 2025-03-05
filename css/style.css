@@ -201,10 +201,33 @@ h2.c-header-01
   text-decoration: none;
   border: 0px;
   border-radius: 4px;
-  transition: 0.5s background-color, color;
+  transition: 0.3s background-color, color;
 }
 
 .external-btn:hover
+{
+  background-color: rgb(202, 202, 202);
+  color: black;
+  cursor: pointer;
+}
+
+.game-btn
+{
+  padding: 10px 25px;
+  background-color: rgb(47, 48, 58);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border: 0px;
+  border-radius: 4px;
+  transition: 0.3s background-color, color;
+
+  max-width: fit-content;
+  max-height: fit-content;
+}
+
+.game-btn:hover
 {
   background-color: rgb(202, 202, 202);
   color: black;
